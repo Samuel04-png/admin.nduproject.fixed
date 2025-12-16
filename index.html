@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Ndu Project">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ndu Project">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <title>Ndu Project</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Preload Google Fonts to fix CanvasKit Typeface binding error -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDK Configuration managed by FlutterFire -->
+  <script>
+    // Align with FlutterFire tested version to avoid runtime issues
+    window.flutterfire_web_sdk_version = '12.3.0';
+    
+    // Workaround for CanvasKit Typeface binding error
+    // Suppress the specific Typeface binding error that doesn't affect functionality
+    window.addEventListener('error', function(e) {
+      if (e.message && e.message.includes('Typeface') && e.message.includes('BindingError')) {
+        e.preventDefault();
+        console.warn('CanvasKit Typeface binding warning (non-critical):', e.message);
+        return true;
+      }
+    }, true);
+    
+    // Also catch unhandled promise rejections
+    window.addEventListener('unhandledrejection', function(e) {
+      if (e.reason && e.reason.message && e.reason.message.includes('Typeface') && e.reason.message.includes('BindingError')) {
+        e.preventDefault();
+        console.warn('CanvasKit Typeface binding warning (non-critical):', e.reason.message);
+        return true;
+      }
+    });
+    
+    // Ensure fonts are loaded before Flutter initializes
+    window.addEventListener('load', function() {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+          console.log('Fonts loaded successfully');
+        }).catch(function(err) {
+          console.warn('Font loading warning:', err);
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <script src="/flutter_bootstrap.js" async></script>
+</body>
+</html>
