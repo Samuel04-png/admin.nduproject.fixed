@@ -35,24 +35,42 @@
   <title>Ndu Project</title>
   <link rel="manifest" href="manifest.json">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
   <!-- Preload Google Fonts to fix CanvasKit Typeface binding error -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
   <!-- Firebase SDK Configuration managed by FlutterFire -->
   <script>
     // Align with FlutterFire tested version to avoid runtime issues
     window.flutterfire_web_sdk_version = '12.3.0';
+<<<<<<< HEAD
     
     // Global error handler for Firebase and other initialization errors
     window.addEventListener('error', function(e) {
       // Suppress Typeface binding errors (non-critical)
+=======
+<<<<<<< HEAD
+    
+    // Workaround for CanvasKit Typeface binding error
+    // Suppress the specific Typeface binding error that doesn't affect functionality
+    window.addEventListener('error', function(e) {
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
       if (e.message && e.message.includes('Typeface') && e.message.includes('BindingError')) {
         e.preventDefault();
         console.warn('CanvasKit Typeface binding warning (non-critical):', e.message);
         return true;
       }
+<<<<<<< HEAD
       // Log other errors for debugging but don't break the app
       if (e.filename && e.filename.includes('main.dart.js')) {
         console.warn('Flutter app error (may be non-critical):', e.message, e.filename, e.lineno);
@@ -62,17 +80,26 @@
     // Catch unhandled promise rejections (including Firebase errors)
     window.addEventListener('unhandledrejection', function(e) {
       // Suppress Typeface binding errors
+=======
+    }, true);
+    
+    // Also catch unhandled promise rejections
+    window.addEventListener('unhandledrejection', function(e) {
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
       if (e.reason && e.reason.message && e.reason.message.includes('Typeface') && e.reason.message.includes('BindingError')) {
         e.preventDefault();
         console.warn('CanvasKit Typeface binding warning (non-critical):', e.reason.message);
         return true;
       }
+<<<<<<< HEAD
       // Log Firebase and other promise rejections but don't break the app
       const errorMsg = e.reason?.message || e.reason?.toString() || 'Unknown error';
       if (errorMsg.includes('Firebase') || errorMsg.includes('firebase') || e.reason?.stack) {
         console.warn('Promise rejection (may be non-critical):', errorMsg);
         // Don't prevent default - let Flutter handle it, but log it
       }
+=======
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
     });
     
     // Ensure fonts are loaded before Flutter initializes
@@ -89,5 +116,22 @@
 </head>
 <body>
   <script src="/flutter_bootstrap.js" async></script>
+<<<<<<< HEAD
+=======
+=======
+  </script>
+</head>
+<body>
+<<<<<<< HEAD
+  <script src="/flutter_bootstrap.js" async></script>
+=======
+<<<<<<< HEAD
+  <script src="/flutter_bootstrap.js" async></script>
+=======
+  <script src="flutter_bootstrap.js" async></script>
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
 </body>
 </html>
