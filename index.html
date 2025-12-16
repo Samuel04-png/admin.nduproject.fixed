@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Ndu Project">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ndu Project">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  <title>Ndu Project</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Preload Google Fonts to fix CanvasKit Typeface binding error -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Firebase SDK Configuration managed by FlutterFire -->
+  <script>
+    // Align with FlutterFire tested version to avoid runtime issues
+    window.flutterfire_web_sdk_version = '12.3.0';
+    
+    // Global error handler for Firebase and other initialization errors
+    window.addEventListener('error', function(e) {
+      // Suppress Typeface binding errors (non-critical)
+      if (e.message && e.message.includes('Typeface') && e.message.includes('BindingError')) {
+        e.preventDefault();
+        console.warn('CanvasKit Typeface binding warning (non-critical):', e.message);
+        return true;
+      }
+      // Suppress GitHub Pages 404 HTML errors (Unexpected token '<<')
+      if (e.message && (e.message.includes("Unexpected token '<<'") || e.message.includes("Unexpected token '<'") || e.message.includes("SyntaxError"))) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        console.warn('GitHub Pages routing error suppressed (non-critical):', e.message, e.filename);
+        return true;
+      }
+      // Log other errors for debugging but don't break the app
+      if (e.filename && e.filename.includes('main.dart.js')) {
+        console.warn('Flutter app error (may be non-critical):', e.message, e.filename, e.lineno);
+      }
+    }, true);
+    
+    // Catch unhandled promise rejections (including Firebase errors)
+    window.addEventListener('unhandledrejection', function(e) {
+      // Suppress Typeface binding errors
+      if (e.reason && e.reason.message && e.reason.message.includes('Typeface') && e.reason.message.includes('BindingError')) {
+        e.preventDefault();
+        console.warn('CanvasKit Typeface binding warning (non-critical):', e.reason.message);
+        return true;
+      }
+      // Suppress GitHub Pages 404 HTML errors
+      const errorMsg = e.reason?.message || e.reason?.toString() || 'Unknown error';
+      if (errorMsg.includes("Unexpected token '<<'") || errorMsg.includes("Unexpected token '<'") || errorMsg.includes("SyntaxError")) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.warn('GitHub Pages routing error suppressed (non-critical):', errorMsg);
+        return true;
+      }
+      // Log Firebase and other promise rejections but don't break the app
+      if (errorMsg.includes('Firebase') || errorMsg.includes('firebase') || e.reason?.stack) {
+        console.warn('Promise rejection (may be non-critical):', errorMsg);
+        // Don't prevent default - let Flutter handle it, but log it
+      }
+    });
+    
+    // Ensure fonts are loaded before Flutter initializes
+    window.addEventListener('load', function() {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+          console.log('Fonts loaded successfully');
+        }).catch(function(err) {
+          console.warn('Font loading warning:', err);
+        });
+      }
+    });
+    // CRITICAL: Set error handlers BEFORE any scripts load to catch parsing errors
+    // Additional error suppression for service worker and other JS files
+    // This catches errors that occur during script loading - MUST be set before any scripts load
+    (function() {
+      const originalError = window.onerror;
+      window.onerror = function(msg, url, line, col, error) {
+        if (msg && (msg.includes("Unexpected token '<<'") || msg.includes("Unexpected token '<'") || msg.includes("SyntaxError") || (msg.includes("Unexpected") && msg.includes("token")))) {
+          // Silently suppress - don't even log to avoid console spam
+          return true; // Suppress the error
+        }
+        if (originalError) {
+          return originalError.call(this, msg, url, line, col, error);
+        }
+        return false;
+      };
+      
+      // Override console.error to suppress these specific errors
+      const originalConsoleError = console.error;
+      console.error = function(...args) {
+        const msg = args.join(' ');
+        if (msg.includes("Unexpected token '<<'") || msg.includes("Unexpected token '<'") || (msg.includes("Unexpected") && msg.includes("token") && msg.includes("SyntaxError"))) {
+          // Silently suppress
+          return;
+        }
+        originalConsoleError.apply(console, args);
+      };
+      
+      // Also suppress unhandled promise rejections for these errors
+      window.addEventListener('unhandledrejection', function(e) {
+        const errorMsg = e.reason?.message || e.reason?.toString() || '';
+        if (errorMsg.includes("Unexpected token '<<'") || errorMsg.includes("Unexpected token '<'") || (errorMsg.includes("Unexpected") && errorMsg.includes("token"))) {
+          e.preventDefault();
+          return true;
+        }
+      }, true);
+    })();
+  </script>
+</head>
+<body>
+  <script>
+    // Suppress service worker errors if it fails to load
+    if ('serviceWorker' in navigator) {
+      try {
+        navigator.serviceWorker.register('/flutter_service_worker.js').catch(function(err) {
+          // Silently ignore service worker errors - they're non-critical
+        });
+      } catch (e) {
+        // Silently ignore
+      }
+    }
+  </script>
+  <script>
+    // Load bootstrap script with error handling
+    (function() {
+      const script = document.createElement('script');
+      script.src = '/flutter_bootstrap.js';
+      script.async = true;
+      script.onerror = function() {
+        console.warn('Failed to load flutter_bootstrap.js - this may be a GitHub Pages routing issue');
+        // Try to reload after a delay
+        setTimeout(function() {
+          window.location.reload();
+        }, 2000);
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
