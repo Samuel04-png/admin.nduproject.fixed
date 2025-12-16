@@ -38,6 +38,42 @@ _flutter.buildConfig = {"engineRevision":"d3d45dcf251823c1769909cd43698d126db38d
 
 _flutter.loader.load({
   serviceWorkerSettings: {
+<<<<<<< HEAD
     serviceWorkerVersion: "2690641602"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "3502419186"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "2915167453"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "2281685976"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "131391575"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "4211958867"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "606824777"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "2131012282"
+=======
+<<<<<<< HEAD
+    serviceWorkerVersion: "1297415817"
+=======
+    serviceWorkerVersion: "1858113027"
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
+>>>>>>> b49ef8f32a81e270bb54caa6c6f5e585a68e2672
+>>>>>>> 8c9d6bc7302b4ca739b71549b03e3de65e7cc581
+>>>>>>> e1a62039cd04e2dfc9db35cfc858c14a6feede55
   }
 });
