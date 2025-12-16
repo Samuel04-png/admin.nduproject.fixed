@@ -3,7 +3,31 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
+<<<<<<< HEAD
 const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+<<<<<<< HEAD
+const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+<<<<<<< HEAD
+const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+<<<<<<< HEAD
+const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+<<<<<<< HEAD
+const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+<<<<<<< HEAD
+const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
+=======
+const RESOURCES = {"404.html": "25370547c69a08e7f9e058d722b7c919",
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
 "assets/AssetManifest.bin": "638a0dc08411d965a8729e45528dac0e",
 "assets/AssetManifest.bin.json": "2c8557f5ee680a5481a01182cd18bc5d",
 "assets/AssetManifest.json": "3dbdbeb1f68dc535e2d84398494be35f",
@@ -41,14 +65,74 @@ const RESOURCES = {"404.html": "77389158d2986cb1ad3fb4b635d2b322",
 "favicon.ico": "e57014a83f4055698bf355a27bdcdeb6",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
+<<<<<<< HEAD
 "flutter_bootstrap.js": "5d66b026857bffb6c24177286fa8a9a0",
+=======
+<<<<<<< HEAD
+"flutter_bootstrap.js": "f33e63064468ee62f9d0faff2030b09a",
+=======
+<<<<<<< HEAD
+"flutter_bootstrap.js": "f6621e9b6578694fd54cb0c74eb3ab86",
+=======
+<<<<<<< HEAD
+"flutter_bootstrap.js": "3ef44e045a02b2241b2eb349f2658b7c",
+=======
+<<<<<<< HEAD
+"flutter_bootstrap.js": "bc799c685f54f42396b40406ff7531fa",
+=======
+<<<<<<< HEAD
+"flutter_bootstrap.js": "e36e5cf1e0078f8610ece3465cb8e59d",
+=======
+"flutter_bootstrap.js": "2af56c926d24bd64c61123688506ccc5",
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
+<<<<<<< HEAD
 "index.html": "a214739cf42c278afd7febfb7c01373c",
 "/": "a214739cf42c278afd7febfb7c01373c",
 "main.dart.js": "89a960056329cc56a4d6dc4373fd717f",
+=======
+<<<<<<< HEAD
+"index.html": "220b6a506c86943c7160e04fe9b6db17",
+"/": "220b6a506c86943c7160e04fe9b6db17",
+"main.dart.js": "89a960056329cc56a4d6dc4373fd717f",
+=======
+<<<<<<< HEAD
+"index.html": "1f44fbe71c00f0ce8e319dafea2342a0",
+"/": "1f44fbe71c00f0ce8e319dafea2342a0",
+"main.dart.js": "89a960056329cc56a4d6dc4373fd717f",
+=======
+<<<<<<< HEAD
+"index.html": "6cfbc522b6e14169b93ed07cd82a0f85",
+"/": "6cfbc522b6e14169b93ed07cd82a0f85",
+"main.dart.js": "ff5720c2f15df22de26bfcb73c8bcdfe",
+=======
+<<<<<<< HEAD
+"index.html": "5b8e711aef86bbea5940f660fe1f7fcb",
+"/": "5b8e711aef86bbea5940f660fe1f7fcb",
+"main.dart.js": "ff5720c2f15df22de26bfcb73c8bcdfe",
+=======
+<<<<<<< HEAD
+"index.html": "5b8e711aef86bbea5940f660fe1f7fcb",
+"/": "5b8e711aef86bbea5940f660fe1f7fcb",
+"main.dart.js": "ff5720c2f15df22de26bfcb73c8bcdfe",
+=======
+"index.html": "635b4821fa6da97c6af8b0ae619ef873",
+"/": "635b4821fa6da97c6af8b0ae619ef873",
+"main.dart.js": "51628813f1512e17aa43e166ffa5ebc5",
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
 "manifest.json": "f014e20ea56c87954f47d718bf82df2d",
 "version.json": "56abcb85ac54d3d5faedc0d214e680d9"};
 // The application shell files that are downloaded before a service worker can

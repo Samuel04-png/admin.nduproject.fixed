@@ -35,24 +35,66 @@
   <title>Ndu Project</title>
   <link rel="manifest" href="manifest.json">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
   <!-- Preload Google Fonts to fix CanvasKit Typeface binding error -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
   <!-- Firebase SDK Configuration managed by FlutterFire -->
   <script>
     // Align with FlutterFire tested version to avoid runtime issues
     window.flutterfire_web_sdk_version = '12.3.0';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
     
     // Global error handler for Firebase and other initialization errors
     window.addEventListener('error', function(e) {
       // Suppress Typeface binding errors (non-critical)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    
+    // Workaround for CanvasKit Typeface binding error
+    // Suppress the specific Typeface binding error that doesn't affect functionality
+    window.addEventListener('error', function(e) {
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
       if (e.message && e.message.includes('Typeface') && e.message.includes('BindingError')) {
         e.preventDefault();
         console.warn('CanvasKit Typeface binding warning (non-critical):', e.message);
         return true;
       }
+<<<<<<< HEAD
       // Suppress GitHub Pages 404 HTML errors (Unexpected token '<<')
       if (e.message && (e.message.includes("Unexpected token '<<'") || e.message.includes("Unexpected token '<'") || e.message.includes("SyntaxError"))) {
         e.preventDefault();
@@ -61,6 +103,25 @@
         console.warn('GitHub Pages routing error suppressed (non-critical):', e.message, e.filename);
         return true;
       }
+=======
+<<<<<<< HEAD
+      // Suppress GitHub Pages 404 HTML errors (Unexpected token '<<')
+      if (e.message && (e.message.includes("Unexpected token '<<'") || e.message.includes("Unexpected token '<'"))) {
+        e.preventDefault();
+        console.warn('GitHub Pages routing error suppressed (non-critical):', e.message);
+        // Try to reload the page after a short delay to get fresh files
+        setTimeout(function() {
+          if (window.location.hash !== '#reloaded') {
+            window.location.hash = '#reloaded';
+            window.location.reload();
+          }
+        }, 1000);
+        return true;
+      }
+=======
+<<<<<<< HEAD
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
       // Log other errors for debugging but don't break the app
       if (e.filename && e.filename.includes('main.dart.js')) {
         console.warn('Flutter app error (may be non-critical):', e.message, e.filename, e.lineno);
@@ -70,24 +131,60 @@
     // Catch unhandled promise rejections (including Firebase errors)
     window.addEventListener('unhandledrejection', function(e) {
       // Suppress Typeface binding errors
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    }, true);
+    
+    // Also catch unhandled promise rejections
+    window.addEventListener('unhandledrejection', function(e) {
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
       if (e.reason && e.reason.message && e.reason.message.includes('Typeface') && e.reason.message.includes('BindingError')) {
         e.preventDefault();
         console.warn('CanvasKit Typeface binding warning (non-critical):', e.reason.message);
         return true;
       }
+<<<<<<< HEAD
       // Suppress GitHub Pages 404 HTML errors
       const errorMsg = e.reason?.message || e.reason?.toString() || 'Unknown error';
       if (errorMsg.includes("Unexpected token '<<'") || errorMsg.includes("Unexpected token '<'") || errorMsg.includes("SyntaxError")) {
         e.preventDefault();
         e.stopPropagation();
+=======
+<<<<<<< HEAD
+      // Suppress GitHub Pages 404 HTML errors
+      const errorMsg = e.reason?.message || e.reason?.toString() || 'Unknown error';
+      if (errorMsg.includes("Unexpected token '<<'") || errorMsg.includes("Unexpected token '<'")) {
+        e.preventDefault();
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
         console.warn('GitHub Pages routing error suppressed (non-critical):', errorMsg);
         return true;
       }
       // Log Firebase and other promise rejections but don't break the app
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+      // Log Firebase and other promise rejections but don't break the app
+      const errorMsg = e.reason?.message || e.reason?.toString() || 'Unknown error';
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
       if (errorMsg.includes('Firebase') || errorMsg.includes('firebase') || e.reason?.stack) {
         console.warn('Promise rejection (may be non-critical):', errorMsg);
         // Don't prevent default - let Flutter handle it, but log it
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
     });
     
     // Ensure fonts are loaded before Flutter initializes
@@ -100,6 +197,7 @@
         });
       }
     });
+<<<<<<< HEAD
     // Additional error suppression for service worker and other JS files
     // This catches errors that occur during script loading
     const originalError = window.onerror;
@@ -125,5 +223,31 @@
     }
   </script>
   <script src="/flutter_bootstrap.js" async></script>
+=======
+  </script>
+</head>
+<body>
+  <script src="/flutter_bootstrap.js" async></script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+  </script>
+</head>
+<body>
+<<<<<<< HEAD
+  <script src="/flutter_bootstrap.js" async></script>
+=======
+<<<<<<< HEAD
+  <script src="/flutter_bootstrap.js" async></script>
+=======
+  <script src="flutter_bootstrap.js" async></script>
+>>>>>>> c4eba9de9a767d654cc61fd716eabab1709101b9
+>>>>>>> 92922bbd0aef7c3d1074a1fdc1b57d0bd94b8cff
+>>>>>>> f3ebb7a841b281468650715d524cc85bf17f82c5
+>>>>>>> c117ef3019b4aa0f1ca7fe63472019ca6d679212
+>>>>>>> 2de299804bea93ca9fbd949b8634bfe6cb8f0982
+>>>>>>> 4199986e3c649a0e9d93a6fe079a139d8d8898c3
 </body>
 </html>
