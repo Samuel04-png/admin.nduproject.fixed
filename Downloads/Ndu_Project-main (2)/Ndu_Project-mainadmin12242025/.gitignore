@@ -1,0 +1,13 @@
+.prompt_attachments
+.dart_tool
+*.hologram.dart
+build/
+lib/services/api_config_secure.dart
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Exclude files from other project directories
+Downloads/
+../Ndu_Project-152025/
+../Ndu_Project-main/
+../Byte-Berry-main/
