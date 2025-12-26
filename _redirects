@@ -1,8 +1,0 @@
-# Netlify redirects file - ensure JS files are served correctly
-/*.js    /:splat.js   200
-/*.wasm  /:splat.wasm 200
-/*.css   /:splat.css  200
-/assets/*  /assets/:splat  200
-/canvaskit/*  /canvaskit/:splat  200
-/*    /index.html   200
-
